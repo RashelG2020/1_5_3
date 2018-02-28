@@ -29,13 +29,14 @@ y = 150
 def radius_changed(new_intval):
     # Get data from model
     # Could do this: r = int(new_intval)
-    r = radius_intvar.get()
+    r = position_changer.get()
     # Controller updating the view
     canvas.coords(circle_item, x-r, y-r, x+r, y+r)
 # Instantiate and place slider
-radius_slider = Tkinter.Scale(root, from_=1, to=150, variable=radius_intvar,    
-                              label='Radius', command=radius_changed)
-radius_slider.grid(row=1, column=0, sticky=Tkinter.W)
+y<=-100
+position_changer = Tkinter.Scale(root, from_=0, to=150, variable= y,    
+                              label='Position', command= 'position_changer')
+position_changer.grid(row=1, column=0, sticky=Tkinter.W)
 # Create and place directions for the user
 text = Tkinter.Label(root, text='Drag slider \nto adjust\ncircle.')
 text.grid(row=0, column=0)

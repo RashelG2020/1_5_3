@@ -18,11 +18,15 @@ root.wm_title('Hexadecimal Explorer')
 #####
 # Create Model
 ######
+ 
 # Create two IntVar's and initialize them to 127
 red_intvar = Tkinter.IntVar() 
 red_intvar.set(127) 
 green_intvar = Tkinter.IntVar()
 green_intvar.set(127)
+ball=circle
+ball_intvar.set(150)
+
 
 ######
 # Create Controller

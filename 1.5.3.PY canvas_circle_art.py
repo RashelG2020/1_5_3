@@ -73,7 +73,7 @@ class ColorSlider(Tkinter.Scale): # ColorSlider is a subclass of Tkinter.Scale
 #####
 
 # Create and place the controllers
-red_slider = ColorSlider(root, 'Red:', red_intvar, editor, canvas)
+red_slider = ColorSlider(root, 'red:', red_intvar, editor, canvas)
 red_slider.grid(row=1, column=0, sticky=Tkinter.W)
 
 green_slider = ColorSlider(root, 'Green:', green_intvar, editor, canvas)
@@ -117,7 +117,7 @@ def up(event):
     r = (startx-event.x)**2 + (starty-event.y)**2  # Pythagorean theorem
     r = int(r**.5)                                 # square root to get distance
     new_shape = canvas.create_oval(startx-r, starty-r, startx+r, starty+r,
-                                    fill=tk_color_string, outline='#000000')
+                                    fill=tk_color_string and 'magenta', outline='purple')
     shapes.append(new_shape) # aggregate the canvas' item
     
 # Subscribe handlers to the Button-1 and ButtonRelease-1 events
